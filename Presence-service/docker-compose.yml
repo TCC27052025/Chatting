@@ -1,9 +1,0 @@
-version: "3.8"
-
-services:
-  redis:
-    image: redis:7.2
-    container_name: presence-redis
-    ports:
-      - "6378:6379"
-    restart: unless-stopped
