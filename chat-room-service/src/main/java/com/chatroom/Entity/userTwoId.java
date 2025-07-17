@@ -7,6 +7,7 @@ import jakarta.persistence.*;
 public class userTwoId {
 
     @Id
+<<<<<<< HEAD
     @Column(name = "user_id")  // Primary key column
     private Long userIdTwo;
 
@@ -15,6 +16,15 @@ public class userTwoId {
     private Chat_Id chatid;
 
     // Getters and Setters
+=======
+    @Column(name = "user_id")
+    private Long userIdTwo;
+
+    @OneToOne
+    @JoinColumn(name = "chat_id", referencedColumnName = "chat_id")  // FIXED HERE
+    private Chat_Id chatid;
+
+>>>>>>> 6a1d08851ff8a3e2ea7a9353b54c701c7a204385
     public Long getUserIdTwo() {
         return userIdTwo;
     }
