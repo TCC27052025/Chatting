@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+package com.chatroom.Controller;
+
+import com.chatroom.DTO.ChatRoomRequestDTO;
+import com.chatroom.DTO.ChatRoomResponseDTO;
+import com.chatroom.Service.ChatRoomService;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+=======
 //package com.chatroom.Controller;
 //
 //import com.chatroom.DTO.CreateChatRoomRequest; // You will need to create these DTOs
@@ -112,11 +123,24 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+>>>>>>> 6a1d08851ff8a3e2ea7a9353b54c701c7a204385
 
 @RestController
 @RequestMapping("/api/v1/chat-room")
 public class ChatRoomController {
 
+<<<<<<< HEAD
+    @Autowired
+    private ChatRoomService chatRoomService;
+
+    @PostMapping
+    public ResponseEntity<ChatRoomResponseDTO> createChatRoom(@RequestBody ChatRoomRequestDTO dto) {
+        ChatRoomResponseDTO response = chatRoomService.createOrGetChatRoom(dto);
+        return ResponseEntity.ok(response);
+    }
+
+}
+=======
     private static final Logger log = LoggerFactory.getLogger(ChatRoomController.class);
 
     private final ChatRoomService chatRoomService;
@@ -156,3 +180,4 @@ public class ChatRoomController {
         return new ResponseEntity<>(response, status);
     }
 }
+>>>>>>> 6a1d08851ff8a3e2ea7a9353b54c701c7a204385

@@ -13,23 +13,39 @@ import jakarta.persistence.Table;
 public class lastMessageTime {
 
     @Id
+<<<<<<< HEAD
+    private Long msgId;
+
+    @OneToOne
+    @MapsId
+    @JoinColumn(name = "chat_id", referencedColumnName = "chatId")
+=======
     @Column(name = "chat_id", length = 255)
     private String msgId;
 
     @OneToOne
     @MapsId
     @JoinColumn(name = "chat_id", referencedColumnName = "chat_id")
+>>>>>>> 6a1d08851ff8a3e2ea7a9353b54c701c7a204385
     private Chat_Id chatid;
 
     @Column(name = "msg_time")
     private String msgTime;
 
     // Getters and Setters
+<<<<<<< HEAD
+    public Long getMsgId() {
+        return msgId;
+    }
+
+    public void setMsgId(Long msgId) {
+=======
     public String getMsgId() {
         return msgId;
     }
 
     public void setMsgId(String msgId) {
+>>>>>>> 6a1d08851ff8a3e2ea7a9353b54c701c7a204385
         this.msgId = msgId;
     }
 

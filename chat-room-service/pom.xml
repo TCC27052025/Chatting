@@ -55,10 +55,13 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+<<<<<<< HEAD
+=======
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-webflux</artifactId>
 		</dependency>
+>>>>>>> 6a1d08851ff8a3e2ea7a9353b54c701c7a204385
 	</dependencies>
 
 	<build>

@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 //package com.chatroom.Repository;
 //
 //import com.chatroom.Entity.Chat_Id;
@@ -22,6 +24,7 @@
 //    Optional<Chat_Id> findByUserOneIdAndUserTwoId(@Param("userOneId") Long userOneId, @Param("userTwoId") Long userTwoId);
 //}
 
+>>>>>>> 6a1d08851ff8a3e2ea7a9353b54c701c7a204385
 package com.chatroom.Repository;
 
 import com.chatroom.Entity.Chat_Id;
@@ -31,6 +34,18 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.Optional;
 
+<<<<<<< HEAD
+public interface ChatIdRepository extends JpaRepository<Chat_Id, Long> {
+
+    @Query("SELECT c FROM Chat_Id c " +
+           "JOIN com.chatroom.Entity.userOneId u1 ON u1.chatid = c " +
+           "JOIN com.chatroom.Entity.userTwoId u2 ON u2.chatid = c " +
+           "WHERE ((u1.userIdOne = :userOne AND u2.userIdTwo = :userTwo) " +
+           "OR (u1.userIdOne = :userTwo AND u2.userIdTwo = :userOne))")
+    Optional<Chat_Id> findChatByUserIds(@Param("userOne") Long userOneId,
+                                        @Param("userTwo") Long userTwoId);
+}
+=======
 public interface ChatIdRepository extends JpaRepository<Chat_Id, String> {
 
     /**
@@ -44,3 +59,4 @@ public interface ChatIdRepository extends JpaRepository<Chat_Id, String> {
             "(c.userOne.userIdOne = :userTwoId AND c.userTwo.userIdTwo = :userOneId)")
     Optional<Chat_Id> findByUserOneIdAndUserTwoId(@Param("userOneId") Long userOneId, @Param("userTwoId") Long userTwoId);
 }
+>>>>>>> 6a1d08851ff8a3e2ea7a9353b54c701c7a204385
