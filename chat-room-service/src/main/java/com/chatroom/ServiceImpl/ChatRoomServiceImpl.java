@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 package com.chatroom.ServiceImpl;
 
 import com.chatroom.DTO.ChatRoomRequestDTO;
@@ -11,6 +12,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.Optional;
 =======
+=======
+>>>>>>> 6a1d08851ff8a3e2ea7a9353b54c701c7a204385
 //package com.chatroom.ServiceImpl;
 //
 //import com.chatroom.DTO.ChatRoomRequestDTO;
@@ -196,11 +199,15 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 import java.util.UUID;
+<<<<<<< HEAD
+>>>>>>> 6a1d08851ff8a3e2ea7a9353b54c701c7a204385
+=======
 >>>>>>> 6a1d08851ff8a3e2ea7a9353b54c701c7a204385
 
 @Service
 public class ChatRoomServiceImpl implements ChatRoomService {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     @Autowired
     private ChatIdRepository chatIdRepo;
@@ -260,6 +267,8 @@ public class ChatRoomServiceImpl implements ChatRoomService {
     }
 }
 =======
+=======
+>>>>>>> 6a1d08851ff8a3e2ea7a9353b54c701c7a204385
     private final ChatIdRepository chatIdRepository;
 
     @Autowired
@@ -310,5 +319,9 @@ public class ChatRoomServiceImpl implements ChatRoomService {
             return response;
         }
     }
+<<<<<<< HEAD
+}
+>>>>>>> 6a1d08851ff8a3e2ea7a9353b54c701c7a204385
+=======
 }
 >>>>>>> 6a1d08851ff8a3e2ea7a9353b54c701c7a204385

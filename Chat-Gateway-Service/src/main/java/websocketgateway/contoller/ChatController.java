@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 package websocketgateway.contoller;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,8 @@ import java.security.Principal;
 
 
 =======
+=======
+>>>>>>> 6a1d08851ff8a3e2ea7a9353b54c701c7a204385
 //package websocketgateway.contoller;
 //
 //import org.slf4j.Logger;
@@ -162,11 +165,15 @@ import websocketgateway.service.WebSocketService;
 
 import java.security.Principal;
 import java.util.List;
+<<<<<<< HEAD
+>>>>>>> 6a1d08851ff8a3e2ea7a9353b54c701c7a204385
+=======
 >>>>>>> 6a1d08851ff8a3e2ea7a9353b54c701c7a204385
 
 @Controller
 public class ChatController {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     @Autowired
     private WebSocketService chatService;
@@ -202,6 +209,8 @@ public class ChatController {
 }
 
 =======
+=======
+>>>>>>> 6a1d08851ff8a3e2ea7a9353b54c701c7a204385
     private static final Logger log = LoggerFactory.getLogger(ChatController.class);
 
     // --- Constants for WebSocket Destinations ---
@@ -309,5 +318,9 @@ public class ChatController {
         messagingTemplate.convertAndSendToUser(senderId.toString(), USER_QUEUE_ROOMS, notificationPayload);
         messagingTemplate.convertAndSendToUser(receiverId.toString(), USER_QUEUE_ROOMS, notificationPayload);
     }
+<<<<<<< HEAD
+}
+>>>>>>> 6a1d08851ff8a3e2ea7a9353b54c701c7a204385
+=======
 }
 >>>>>>> 6a1d08851ff8a3e2ea7a9353b54c701c7a204385

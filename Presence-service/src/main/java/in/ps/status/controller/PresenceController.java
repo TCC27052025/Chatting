@@ -1,6 +1,7 @@
 package in.ps.status.controller;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import in.ps.status.dto.PresenceResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -8,6 +9,8 @@ import org.springframework.web.bind.annotation.*;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 =======
+=======
+>>>>>>> 6a1d08851ff8a3e2ea7a9353b54c701c7a204385
 import in.ps.status.dto.PresenceRequest;
 import in.ps.status.dto.PresenceResponse;
 import in.ps.status.service.PresenceService; // Import the service
@@ -16,12 +19,16 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+<<<<<<< HEAD
+>>>>>>> 6a1d08851ff8a3e2ea7a9353b54c701c7a204385
+=======
 >>>>>>> 6a1d08851ff8a3e2ea7a9353b54c701c7a204385
 
 @RestController
 @RequestMapping("/api/v1/presence")
 public class PresenceController {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     @Autowired
     private RedisTemplate<String, String> redisTemplate;
@@ -70,6 +77,8 @@ public class PresenceController {
 
         return "User " + userId + " marked offline. Last seen set to " + lastSeen;
 =======
+=======
+>>>>>>> 6a1d08851ff8a3e2ea7a9353b54c701c7a204385
     private static final Logger log = LoggerFactory.getLogger(PresenceController.class);
 
     private final PresenceService presenceService; // Inject the service
@@ -103,6 +112,9 @@ public class PresenceController {
         log.info("TYPING event for userId: {}, chatId: {}, isTyping: {}", request.getUserId(), request.getChatId(), request.isTyping());
         presenceService.setTypingStatus(request.getUserId(), request.getChatId(), request.isTyping());
         return ResponseEntity.ok().build();
+<<<<<<< HEAD
+>>>>>>> 6a1d08851ff8a3e2ea7a9353b54c701c7a204385
+=======
 >>>>>>> 6a1d08851ff8a3e2ea7a9353b54c701c7a204385
     }
 }

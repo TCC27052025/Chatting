@@ -8,8 +8,13 @@ public class ChatId {
 
     @Id
 <<<<<<< HEAD
+<<<<<<< HEAD
     @Column(name = "chat_uid", nullable = false)
     private String chatUid;
+=======
+    @Column(name = "chat_id", nullable = false)
+    private String chat_id;
+>>>>>>> 6a1d08851ff8a3e2ea7a9353b54c701c7a204385
 =======
     @Column(name = "chat_id", nullable = false)
     private String chat_id;
@@ -19,6 +24,7 @@ public class ChatId {
     @JoinColumn(name = "message_id", nullable = false)
     private MessageId message;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     public ChatId() {
         // Default constructor
@@ -35,6 +41,8 @@ public class ChatId {
     public void setChatUid(String chatUid) {
         this.chatUid = chatUid;
 =======
+=======
+>>>>>>> 6a1d08851ff8a3e2ea7a9353b54c701c7a204385
     // ✅ Default constructor required by JPA
     public ChatId() {
     }
@@ -56,6 +64,9 @@ public class ChatId {
 
     public void setChat_id(String chat_id) {
         this.chat_id = chat_id;
+<<<<<<< HEAD
+>>>>>>> 6a1d08851ff8a3e2ea7a9353b54c701c7a204385
+=======
 >>>>>>> 6a1d08851ff8a3e2ea7a9353b54c701c7a204385
     }
 
@@ -68,6 +79,9 @@ public class ChatId {
     }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6a1d08851ff8a3e2ea7a9353b54c701c7a204385
 =======
 >>>>>>> 6a1d08851ff8a3e2ea7a9353b54c701c7a204385
