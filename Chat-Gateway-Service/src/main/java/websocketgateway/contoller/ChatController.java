@@ -1,3 +1,28 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+package websocketgateway.contoller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.messaging.handler.annotation.MessageMapping;
+import org.springframework.messaging.handler.annotation.Payload;
+import org.springframework.messaging.handler.annotation.SendTo;
+import org.springframework.stereotype.Controller;
+import websocketgateway.dto.ChatMessageRequest;
+import websocketgateway.dto.ChatMessageResponse;
+import websocketgateway.security.JwtUtil;
+import websocketgateway.service.WebSocketService;
+
+import java.security.Principal;
+
+/**
+ * Controller for handling chat messages.
+ * This controller processes incoming chat messages and seen events.
+ */
+
+
+=======
+=======
+>>>>>>> 6a1d08851ff8a3e2ea7a9353b54c701c7a204385
 //package websocketgateway.contoller;
 //
 //import org.slf4j.Logger;
@@ -140,10 +165,52 @@ import websocketgateway.service.WebSocketService;
 
 import java.security.Principal;
 import java.util.List;
+<<<<<<< HEAD
+>>>>>>> 6a1d08851ff8a3e2ea7a9353b54c701c7a204385
+=======
+>>>>>>> 6a1d08851ff8a3e2ea7a9353b54c701c7a204385
 
 @Controller
 public class ChatController {
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+    @Autowired
+    private WebSocketService chatService;
+
+
+    @MessageMapping("/chat.sendMessage")
+    public ChatMessageResponse sendMessage(@Payload ChatMessageRequest message, Principal principal) {
+        if (principal == null || principal.getName() == null) {
+            System.out.println("🚨 Principal is NULL!");
+            throw new IllegalArgumentException("Sender information is missing from Principal");
+        }
+
+        System.out.println("✅ Principal from WebSocket: " + principal.getName());
+
+        Long senderId = Long.valueOf(principal.getName());
+        message.setSenderId(senderId);
+
+        return chatService.processSendMessage(message);
+    }
+
+    @MessageMapping("/chat.messageSeenBackend")
+    public ChatMessageResponse messageSeen(@Payload ChatMessageRequest message, Principal principal) {
+        if (principal == null || principal.getName() == null) {
+            throw new IllegalArgumentException("Receiver information is missing from Principal");
+        }
+
+        // ✅ Use Principal as the one who saw the message (the receiver)
+        Long receiverId = Long.valueOf(principal.getName());
+        message.setReceiverId(receiverId);
+
+        return chatService.processSeenEvent(message);
+    }
+}
+
+=======
+=======
+>>>>>>> 6a1d08851ff8a3e2ea7a9353b54c701c7a204385
     private static final Logger log = LoggerFactory.getLogger(ChatController.class);
 
     // --- Constants for WebSocket Destinations ---
@@ -251,4 +318,9 @@ public class ChatController {
         messagingTemplate.convertAndSendToUser(senderId.toString(), USER_QUEUE_ROOMS, notificationPayload);
         messagingTemplate.convertAndSendToUser(receiverId.toString(), USER_QUEUE_ROOMS, notificationPayload);
     }
+<<<<<<< HEAD
 }
+>>>>>>> 6a1d08851ff8a3e2ea7a9353b54c701c7a204385
+=======
+}
+>>>>>>> 6a1d08851ff8a3e2ea7a9353b54c701c7a204385

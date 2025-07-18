@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 6a1d08851ff8a3e2ea7a9353b54c701c7a204385
 //package com.chatroom.Entity;
 //
 //import jakarta.persistence.Column;
@@ -48,10 +53,39 @@
 //	}
 //}
 
+<<<<<<< HEAD
+>>>>>>> 6a1d08851ff8a3e2ea7a9353b54c701c7a204385
+=======
+>>>>>>> 6a1d08851ff8a3e2ea7a9353b54c701c7a204385
 package com.chatroom.Entity;
 
 import jakarta.persistence.*;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+@Entity
+@Table(name = "chat_id")
+public class Chat_Id {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long chatId;
+
+ 
+    public Long getChatId() {
+		return chatId;
+	}
+
+	public void setChatId(Long chatId) {
+		this.chatId = chatId;
+	}
+
+	
+}
+=======
+=======
+>>>>>>> 6a1d08851ff8a3e2ea7a9353b54c701c7a204385
 @Entity
 @Table(name = "chat_rooms")
 public class Chat_Id {
@@ -97,4 +131,9 @@ public class Chat_Id {
 	public void setUserTwo(userTwoId userTwo) {
 		this.userTwo = userTwo;
 	}
+<<<<<<< HEAD
 }
+>>>>>>> 6a1d08851ff8a3e2ea7a9353b54c701c7a204385
+=======
+}
+>>>>>>> 6a1d08851ff8a3e2ea7a9353b54c701c7a204385

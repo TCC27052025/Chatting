@@ -112,6 +112,11 @@
 			<version>RELEASE</version>
 			<scope>compile</scope>
 		</dependency>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 6a1d08851ff8a3e2ea7a9353b54c701c7a204385
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-webflux</artifactId>
@@ -120,6 +125,10 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-webflux</artifactId>
 		</dependency>
+<<<<<<< HEAD
+>>>>>>> 6a1d08851ff8a3e2ea7a9353b54c701c7a204385
+=======
+>>>>>>> 6a1d08851ff8a3e2ea7a9353b54c701c7a204385
 	</dependencies>
 
 	<build>
@@ -132,5 +141,13 @@
 	</build>
 
 </project>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 6a1d08851ff8a3e2ea7a9353b54c701c7a204385
+=======
+
+
+>>>>>>> 6a1d08851ff8a3e2ea7a9353b54c701c7a204385

@@ -35,6 +35,14 @@ public class MessageProducer {
         logger.info("➡️ Producing message to Kafka topic [{}]: {}", topic, payload);
         kafkaTemplate.send(topic, payload);
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 6a1d08851ff8a3e2ea7a9353b54c701c7a204385
+=======
+
+
+>>>>>>> 6a1d08851ff8a3e2ea7a9353b54c701c7a204385
 }
